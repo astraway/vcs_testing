@@ -22,7 +22,7 @@ from prefect import Flow
 with Flow("My first flow!") as flow:
     z = Parameter('5')
     first_result = add(1, z)
-    second_result = add(x=first_result, y=500)
+    second_result = add(x=first_result, y=600)
 
 z = 5
 state = flow.run(parameters={'5': z})
